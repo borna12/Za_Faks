@@ -22,10 +22,12 @@ public class kameraKontrole : MonoBehaviour {
 
 
         var glazba = GameObject.Find("main_music");
-
-        AudioClip clip = Resources.Load("Theme") as AudioClip;
-        glazba.audio.clip = clip;
-        glazba.audio.Play();
+	    if (glazba.audio.isPlaying == false)
+	    {
+	        AudioClip clip = Resources.Load("Theme") as AudioClip;
+	        glazba.audio.clip = clip;
+	        glazba.audio.Play();
+	    }
 
 	}
 
