@@ -10,7 +10,7 @@ public class pauseMenu : MonoBehaviour
 
     private void Start()
     {
-        windowRect = new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200);
+        windowRect = new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 100);
     }
 
     private void waiting()
@@ -24,18 +24,28 @@ public class pauseMenu : MonoBehaviour
             if (Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.P))
             {
                 if (paused)
+                {
                     paused = false;
+                }
                 else
+                {
                     paused = true;
-
-                waited = false;
-                Invoke("waiting",0.3f);
-               
+                    waited = false;
+                    Invoke("waiting", 0.3f);
+                }
             }
         if (paused)
+        {
             Time.timeScale = 0;
+            
+        }
+
         else
+        {
             Time.timeScale = 1;
+            
+        }
+
     }
 
     private void OnGUI()
@@ -50,7 +60,7 @@ public class pauseMenu : MonoBehaviour
         {
             paused = false;
         }
-        GUILayout.BeginHorizontal();
+
         if (GUILayout.Button("Options"))
         {
 
@@ -60,6 +70,6 @@ public class pauseMenu : MonoBehaviour
         {
 
         }
-        GUILayout.EndHorizontal();
+
     }
 }

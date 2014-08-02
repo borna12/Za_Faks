@@ -94,6 +94,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400006}
   - 95: {fileID: 9500000}
+  - 114: {fileID: 11400008}
   m_Layer: 10
   m_Name: igrac
   m_TagString: Player
@@ -466,6 +467,22 @@ MonoBehaviour:
   Below: 2
   Left: 1
   Right: 1
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e20bfa452aea1e469354017713d3537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - Main Music
+  - FX Music
+  - Controles
+  slectedItem: 2
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
