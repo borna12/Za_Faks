@@ -4,6 +4,8 @@
 TagManager:
   tags:
   - 
+  - voda
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -37,7 +39,35 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: pozadina
+    userID: 1
+    uniqueID: 2172288013
+    locked: 0
+  - name: planine
+    userID: 2
+    uniqueID: 1643884883
+    locked: 0
+  - name: "drve\u0107e"
+    userID: 3
+    uniqueID: 3055425247
+    locked: 0
+  - name: platforme
+    userID: 4
+    uniqueID: 2864480835
+    locked: 0
+  - name: projektili
+    userID: 5
+    uniqueID: 761287055
+    locked: 0
+  - name: pickupovi
+    userID: 7
+    uniqueID: 3503085445
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: igrac i protivnik
+    userID: 6
+    uniqueID: 3665520603
     locked: 0

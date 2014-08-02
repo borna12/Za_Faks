@@ -20,6 +20,13 @@ public class kameraKontrole : MonoBehaviour {
 		_max = Bounds.bounds.max;
 		IsFollowing = true;
 
+
+        var glazba = GameObject.Find("main_music");
+
+        AudioClip clip = Resources.Load("Theme") as AudioClip;
+        glazba.audio.clip = clip;
+        glazba.audio.Play();
+
 	}
 
 	public void Update()
