@@ -14,7 +14,7 @@ public class volume : MonoBehaviour
      void Awake()
     {
         var glazba = GameObject.Find("main_music");
-        tm = (TextMesh)GameObject.Find(glazba.audio.ToString()).GetComponent<TextMesh>();
+        tm = (TextMesh)GameObject.Find("volume").GetComponent<TextMesh>();
          float cjeli;
          cjeli = glazba.audio.volume*10;
          cjeli = Convert.ToInt32(cjeli);
@@ -78,6 +78,11 @@ public class volume : MonoBehaviour
     {
 
         renderer.material.color = Color.white;
+        /*
+        Time.timeScale = 1;
+        var glazba = GameObject.Find("main_music");
+        glazba.audio.PlayScheduled(1);
+        gameObject.SetActive(false);*/
     }
 
   

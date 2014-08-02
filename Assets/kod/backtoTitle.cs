@@ -4,8 +4,13 @@ using System.Collections;
 public class backtoTitle : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+	    var glazba = GameObject.Find("main_music");
+	    if (glazba.audio.isPlaying==false)
+	    {
+            glazba.audio.Play();
+	    }
 	}
 	
 	// Update is called once per frame
@@ -13,8 +18,9 @@ public class backtoTitle : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape) == true)
         {
             Application.LoadLevel("title");
-            var glazba = GameObject.Find("One shot audio");
-            DestroyObject(glazba);
+            var glazba = GameObject.Find("main_music");
+            glazba.audio.Stop();
+
         }
 	}
 }

@@ -55,6 +55,14 @@ public class mouseEnter : MonoBehaviour
         if (gameObject.name == "new_game")
             {
                 Application.LoadLevel("level1");
+                var glazba = GameObject.Find("main_music");
+                
+                
+               
+                AudioClip clip = Resources.Load("Theme") as AudioClip;
+                glazba.audio.clip = clip;
+                glazba.audio.Play();
+                
             }
         }
 
