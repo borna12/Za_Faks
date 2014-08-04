@@ -478,11 +478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e20bfa452aea1e469354017713d3537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - Main Music
-  - FX Music
-  - Controles
-  slectedItem: 2
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

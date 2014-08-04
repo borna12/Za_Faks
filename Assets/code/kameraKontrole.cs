@@ -19,21 +19,23 @@ public class kameraKontrole : MonoBehaviour {
 		_min = Bounds.bounds.min;
 		_max = Bounds.bounds.max;
 		IsFollowing = true;
+	    Screen.showCursor = false;
 
 
-        var glazba = GameObject.Find("main_music");
-	    if (glazba.audio.isPlaying == false)
+        var glaz = GameObject.Find("main_music");
+	    if (glaz.audio.isPlaying == false)
 	    {
 	        AudioClip clip = Resources.Load("Theme") as AudioClip;
-	        glazba.audio.clip = clip;
-	        glazba.audio.Play();
+	        glaz.audio.clip = clip;
+	        glaz.audio.Play();
 	    }
-
+	    
 	}
 
 	public void Update()
 	{
-		var x = transform.position.x;
+	    
+	    var x = transform.position.x;
 		var y = transform.position.y;
 
 		if (IsFollowing) {

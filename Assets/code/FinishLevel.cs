@@ -12,5 +12,7 @@ public class FinishLevel : MonoBehaviour
         return;
         
    levelmanager.Instance.GoToNextLevel(LevelName);
+   var music = GameObject.Find("main_music");
+   DontDestroyOnLoad(music);
 }
 }
