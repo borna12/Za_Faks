@@ -16,7 +16,7 @@ public class levelmanager : MonoBehaviour
 	public int CurrentTimeBonus
 	{
 		get{
-			var secondDifference=(int)(BonusCutOffSeconds-RunningTime.TotalSeconds);
+			var secondDifference=(int)(BonusCutOffSeconds-Time.timeSinceLevelLoad);
 			return Mathf.Max(0, secondDifference)*BonusSecondMultiplier;
 		}
 	}

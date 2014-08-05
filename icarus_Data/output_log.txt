@@ -10,69 +10,7 @@ Platform assembly: C:\Users\Denis\Documents\josip2\rad\Icarus\icarus_Data\Manage
 Loading C:\Users\Denis\Documents\josip2\rad\Icarus\icarus_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Denis\Documents\josip2\rad\Icarus\icarus_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Denis\Documents\josip2\rad\Icarus\icarus_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+- Completed reload, in  0.046 seconds
 desktop: 1920x1200 59Hz; virtual: 1920x1200 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Denis\Documents\josip2\rad\Icarus\icarus_Data\Managed\System.Core.dll (this message is harmless)
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.446602 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 156.
-Total: 1.276967 ms (FindLiveObjects: 0.022797 ms CreateObjectMapping: 0.011983 ms MarkObjects: 0.073946 ms  DeleteObjects: 0.066639 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.221839 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1112.
-Total: 2.151759 ms (FindLiveObjects: 0.029227 ms CreateObjectMapping: 0.009352 ms MarkObjects: 0.114281 ms  DeleteObjects: 1.496177 ms)
-
-Platform assembly: C:\Users\Denis\Documents\josip2\rad\Icarus\icarus_Data\Managed\System.dll (this message is harmless)
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 1.574215 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 544.
-Total: 1.566324 ms (FindLiveObjects: 0.036534 ms CreateObjectMapping: 0.018705 ms MarkObjects: 0.277665 ms  DeleteObjects: 0.119249 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1783)
-
-UnloadTime: 0.922433 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 222.
-Total: 1.603151 ms (FindLiveObjects: 0.014906 ms CreateObjectMapping: 0.018413 ms MarkObjects: 0.291986 ms  DeleteObjects: 0.224470 ms)
-

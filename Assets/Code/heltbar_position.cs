@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class heltbar_position : MonoBehaviour
@@ -12,8 +13,9 @@ public class heltbar_position : MonoBehaviour
 
         if (objectTarget != null)
         {
-            objectTarget.transform.position = camera.ScreenToWorldPoint(screenPosition);
+            objectTarget.transform.position = Camera.main.ViewportToWorldPoint(screenPosition);
         }
-
     }
+
+
 }

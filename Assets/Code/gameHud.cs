@@ -7,19 +7,23 @@ public class gameHud :MonoBehaviour
 
     public string tekst="{0:00}:{1:00} with {2} bonus";
     public Color TextColor = Color.black;
+
+ 
 	public void OnGUI()
 
 	{
 
+        /* 
 		GUI.skin = Skin;
-		GUILayout.BeginArea (new Rect(0,0,Screen.width,Screen.height));
+        GUILayout.BeginArea(new Rect(20, 200, Screen.width, Screen.height));
 		{
+            
 			GUILayout.BeginVertical(Skin.GetStyle("GameHud"));
 		    {
 		        GUILayout.Label(string.Format("Points:{0}", gamemanager.Instance.Points), Skin.GetStyle("PointsText"));
 
                 
-		        var time = levelmanager.Instance.RunningTime;
+		       var time = levelmanager.Instance.RunningTime;
 		        GUILayout.Label(string.Format(
 		                tekst,
 		                time.Minutes + (time.Hours*60),
@@ -30,6 +34,7 @@ public class gameHud :MonoBehaviour
 			GUILayout.EndVertical();
 		}
 		GUILayout.EndArea ();
+          */
 
-	}
+    }
 }

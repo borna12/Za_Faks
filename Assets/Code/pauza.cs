@@ -84,6 +84,7 @@ public class pauza : MonoBehaviour
                 var igrac = GameObject.Find("igrac");
                 igrac.GetComponent<igrac>().enabled = false;
 
+               
             }
             else
             {
@@ -94,7 +95,7 @@ public class pauza : MonoBehaviour
                 igrac.GetComponent<igrac>().enabled = true;
                 Screen.showCursor = false;
 
-               
+
             }
         }
     }
