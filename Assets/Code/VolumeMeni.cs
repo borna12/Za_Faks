@@ -3,7 +3,7 @@ using System.Net.Mime;
 using UnityEngine;
 using System.Collections;
 
-public class volume : MonoBehaviour
+public class VolumeMeni : MonoBehaviour
 {
 
     private TextMesh tm;

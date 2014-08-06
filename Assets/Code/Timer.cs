@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class timeText : MonoBehaviour {
+public class Timer : MonoBehaviour {
 
     public string tekst = "{0:00}:{1:00} with {2} bonus";
 	// Use this for initialization
@@ -27,7 +27,7 @@ public class timeText : MonoBehaviour {
             tekst,
             minute,
             seconds,
-            levelmanager.Instance.CurrentTimeBonus)
+            LevelManager.Instance.CurrentTimeBonus)
             ;
         
            

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-public class SimpleProjectile : projektil {
+public class SimpleProjectile : Projectile {
 	public int Damage;
 	public GameObject DestroyedEffect;
 	public int PointsToGiveToPlayer;
@@ -20,10 +20,10 @@ public class SimpleProjectile : projektil {
 	{
         
 		if (PointsToGiveToPlayer != 0) {
-			var projectile= instigator.GetComponent<projektil>();
-			if (projectile!=null && projectile.Owner.GetComponent<igrac>()!=null)
+			var projectile= instigator.GetComponent<Projectile>();
+			if (projectile!=null && projectile.Owner.GetComponent<Player>()!=null)
 			{
-				gamemanager.Instance.AddPoints(PointsToGiveToPlayer);
+				GameManager.Instance.AddPoints(PointsToGiveToPlayer);
 				FloatingText.Show(string.Format("+{0}!", PointsToGiveToPlayer),"PointStarText", new FromWorldPointTextPositioner(Camera.main, transform.position, 1.5f,50));
 
 			}

@@ -1,19 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class startScene : MonoBehaviour
+public class StartScreen : MonoBehaviour
 {
-
     public string FirstLevel;
 
     public void Update()
     {
-        if (!Input.GetMouseButtonDown(0))
+        if(!Input.GetMouseButtonDown(0))
             return;
-
-        gamemanager.Instance.Reset();
+        
+        GameManager.Instance.Reset();
         Application.LoadLevel(FirstLevel);
-
-
     }
 }

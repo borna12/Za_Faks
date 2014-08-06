@@ -9,7 +9,7 @@ public class GiveHealth : MonoBehaviour, IPlayerRespawnListener
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        var player = other.GetComponent<igrac>();
+        var player = other.GetComponent<Player>();
         if (player == null)
             return;
 
@@ -19,7 +19,7 @@ public class GiveHealth : MonoBehaviour, IPlayerRespawnListener
         gameObject.SetActive(false);
 
     }
-    public void OnPlayerRespawnInThicCheckpoint(checkpoint checkpoint, igrac player)
+    public void OnPlayerRespawnInThicCheckpoint(Checkpoint Checkpoint, Player player)
     {
         gameObject.SetActive(true);
     }

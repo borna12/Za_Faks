@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playerBounds : MonoBehaviour {
+public class PlayerBounds : MonoBehaviour {
     public enum BoundsBehavior
     {
         Nothing,
@@ -15,12 +15,12 @@ public class playerBounds : MonoBehaviour {
     public BoundsBehavior Left;
     public BoundsBehavior Right;
 
-    private igrac _player;
+    private Player _player;
     private BoxCollider2D _boxCollider;
 
     public void Start()
     {
-        _player = GetComponent<igrac>();
+        _player = GetComponent<Player>();
         _boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -52,7 +52,7 @@ public class playerBounds : MonoBehaviour {
     {
         if (behavior == BoundsBehavior.Kill)
         {
-            levelmanager.Instance.KillPlayer();
+            LevelManager.Instance.KillPlayer();
             return;
         }
         transform.position = constrainedPosition;

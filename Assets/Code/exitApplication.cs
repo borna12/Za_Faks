@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class exitApplication : MonoBehaviour
+public class ExitApplication : MonoBehaviour
 {
     public string nivo;
 

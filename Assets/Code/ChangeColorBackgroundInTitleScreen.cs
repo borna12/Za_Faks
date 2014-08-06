@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class color : MonoBehaviour{
+public class ChangeColorBackgroundInTitleScreen : MonoBehaviour
+{
 
 	// Use this for initialization
     void Awake()

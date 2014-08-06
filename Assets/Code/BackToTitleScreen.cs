@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class backtoTitle : MonoBehaviour {
+public class BackToTitleScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()

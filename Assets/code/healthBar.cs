@@ -2,9 +2,9 @@
 
 
 
-public class healthBar : MonoBehaviour {
+public class HealthBar : MonoBehaviour {
 
-	public igrac Player;
+	public Player Player;
 	public Transform foregroundSprite;
 	public SpriteRenderer foreGroundRenderer;
 	public Color MaxHealthColor = new Color (255 / 255f, 63 / 255f, 63 / 255f);

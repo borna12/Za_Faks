@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class kontrolerzalika : MonoBehaviour {
+public class CharacterController2D : MonoBehaviour {
 
 	private const float SkinWidth= .02f;
 	private const int TotalHorizontalRays=8;
@@ -10,26 +10,26 @@ public class kontrolerzalika : MonoBehaviour {
 	private static readonly float SlopeLimitTangant = Mathf.Tan (75f * Mathf.Deg2Rad);
 
 	public LayerMask PlatformMask;
-	public kontrolerparametar DefaultParameters;
+	public ControllerParameters2D DefaultParameters;
 
-	public kontrolerstanja2d State { get; private set; }
+	public ControllerState2D State { get; private set; }
 	public Vector2 Velocity { get {return _velocity;}}
 	public Vector3 PlatformVelocity { get; private set; }
 	public bool CanJump{get{
-			if (Parameters.JumpRestrictions==kontrolerparametar.JumpBehavior.CanJumpAnywhere)
+			if (Parameters.JumpRestrictions==ControllerParameters2D.JumpBehavior.CanJumpAnywhere)
 				return _jumpIn<0;
-			if (Parameters.JumpRestrictions == kontrolerparametar.JumpBehavior.CanJumpOnGround)
+			if (Parameters.JumpRestrictions == ControllerParameters2D.JumpBehavior.CanJumpOnGround)
 				return State.IsGrounded;
 			return false;}}
 	public bool HandleCollisions { get; set;}
-	public kontrolerparametar Parameters{get{return _overrideParameters ?? DefaultParameters;}}
+	public ControllerParameters2D Parameters{get{return _overrideParameters ?? DefaultParameters;}}
 	public GameObject StandingOn { get; private set; }
 
 	private Vector2 _velocity;
 	private Transform _transform;
 	private Vector3 _localScale;
 	private BoxCollider2D _boxCollider;
-	private kontrolerparametar _overrideParameters;
+	private ControllerParameters2D _overrideParameters;
 	private float _jumpIn;
 	private GameObject _lastStandingOn;
 
@@ -47,7 +47,7 @@ public class kontrolerzalika : MonoBehaviour {
 	public void Awake()
 	{
 		HandleCollisions = true;
-		State=new kontrolerstanja2d();
+		State=new ControllerState2D();
 		_transform = transform;
 		_localScale = transform.localScale;
 		_boxCollider = GetComponent<BoxCollider2D>();
@@ -321,7 +321,7 @@ public class kontrolerzalika : MonoBehaviour {
 	}
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-		var paramaters = other.gameObject.GetComponent<kontroler_fizika_2d>();
+		var paramaters = other.gameObject.GetComponent<ControllerPhysicVolume2D>();
 		if (paramaters == null)
 						return;
 
@@ -333,7 +333,7 @@ public class kontrolerzalika : MonoBehaviour {
 	}
 	public void OnTriggerExit2D(Collider2D other)
 	{
-		var parameters = other.gameObject.GetComponent<kontroler_fizika_2d> ();
+		var parameters = other.gameObject.GetComponent<ControllerPhysicVolume2D> ();
 		if (parameters == null)
 						return;
 

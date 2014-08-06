@@ -15,13 +15,13 @@ public class PointStar : MonoBehaviour, IPlayerRespawnListener
         if (_isCollected) 
         return;
 
-        if (other.GetComponent<igrac>() == null)
+        if (other.GetComponent<Player>() == null)
             return;
 
         if  (HitStarSound!= null)
             AudioSource.PlayClipAtPoint(HitStarSound, transform.position);
 
-        gamemanager.Instance.AddPoints(PointsToAdd);
+        GameManager.Instance.AddPoints(PointsToAdd);
         Instantiate(Effect, transform.position, transform.rotation);
 
         FloatingText.Show(string.Format("+{0}!", PointsToAdd), "PointStarText",
@@ -38,7 +38,7 @@ public class PointStar : MonoBehaviour, IPlayerRespawnListener
         Animator.SetTrigger("reset");
     }
 
-    public void OnPlayerRespawnInThicCheckpoint(checkpoint checkpoint, igrac player)
+    public void OnPlayerRespawnInThicCheckpoint(Checkpoint Checkpoint, Player player)
     {
         _isCollected = false;
         Renderer.enabled = true;

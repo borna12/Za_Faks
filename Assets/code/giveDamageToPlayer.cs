@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class giveDamageToPlayer : MonoBehaviour {
+public class GiveDamageToPlayer : MonoBehaviour {
 	public int DamagetoGive=10;
 	private Vector2
 		_lastPosition,
@@ -14,12 +14,12 @@ public class giveDamageToPlayer : MonoBehaviour {
 	}
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-		var player = other.GetComponent<igrac>();
+		var player = other.GetComponent<Player>();
 		if (player == null)
 						return;
 
 		player.TakeDamage (DamagetoGive,gameObject);
-		var controller = player.GetComponent<kontrolerzalika> ();
+		var controller = player.GetComponent<CharacterController2D> ();
 		var totalVelocity = controller.Velocity + _velocity;
 
 		controller.SetForce (new Vector2 (

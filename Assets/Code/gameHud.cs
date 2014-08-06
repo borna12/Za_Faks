@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class gameHud :MonoBehaviour
+public class GameHud :MonoBehaviour
 		{
 	public GUISkin Skin;
 
@@ -20,15 +20,15 @@ public class gameHud :MonoBehaviour
             
 			GUILayout.BeginVertical(Skin.GetStyle("GameHud"));
 		    {
-		        GUILayout.Label(string.Format("Points:{0}", gamemanager.Instance.Points), Skin.GetStyle("PointsText"));
+		        GUILayout.Label(string.Format("Points:{0}", GameManager.Instance.Points), Skin.GetStyle("PointsText"));
 
                 
-		       var time = levelmanager.Instance.RunningTime;
+		       var time = LevelManager.Instance.RunningTime;
 		        GUILayout.Label(string.Format(
 		                tekst,
 		                time.Minutes + (time.Hours*60),
 		                time.Seconds,
-		                levelmanager.Instance.CurrentTimeBonus), Skin.GetStyle("TimeText")
+		                LevelManager.Instance.CurrentTimeBonus), Skin.GetStyle("TimeText")
 		                );
 		    }
 			GUILayout.EndVertical();

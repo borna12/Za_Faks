@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class gamemanager 
+public class GameManager 
 {
-	private static gamemanager _instance;
-	public static gamemanager Instance{ get { return _instance ?? (_instance=new gamemanager()); } }
+	private static GameManager _instance;
+	public static GameManager Instance{ get { return _instance ?? (_instance=new GameManager()); } }
 	public int Points { get; private set;}
 
-	private gamemanager(){
+	private GameManager(){
 
 	}
 	

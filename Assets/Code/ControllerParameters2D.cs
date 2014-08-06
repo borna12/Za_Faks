@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 [Serializable]
-public class kontrolerparametar {
+public class ControllerParameters2D {
 	public enum JumpBehavior{
 		CanJumpOnGround,
 		CanJumpAnywhere,

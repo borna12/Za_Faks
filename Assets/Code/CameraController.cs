@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class kameraKontrole : MonoBehaviour {
+public class CameraController : MonoBehaviour {
 	public Transform Player;
 
 	public Vector2 Margin, Smoothing;

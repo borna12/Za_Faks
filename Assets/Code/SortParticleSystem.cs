@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class sortParticalsystem : MonoBehaviour {
+public class SortParticalsystem : MonoBehaviour {
 	public string LayerName="Particles";
 
 	public void Start()

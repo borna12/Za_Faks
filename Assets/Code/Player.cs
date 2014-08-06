@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class igrac : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	
 	private bool _isFacingRight;
-	private kontrolerzalika _controller;
+	private CharacterController2D _controller;
 	private float _normalizedHorizontalSpeed;
 
 	public float MaxSpeed=8;
@@ -13,7 +13,7 @@ public class igrac : MonoBehaviour {
 	public float SpeedAccelerationInAir=5f;
 	public int MaxHealth=100;
 	public GameObject OuchEffect;
-	public projektil Projectile;
+	public Projectile Projectile;
 	public float FireRate;
 	public Transform ProjectileFireLocation;
 	public GameObject FireProjectileEffect;
@@ -31,7 +31,7 @@ public class igrac : MonoBehaviour {
 
 	public void Awake(){
 
-		_controller = GetComponent<kontrolerzalika>();
+        _controller = GetComponent<CharacterController2D>();
 		_isFacingRight = transform.localScale.x > 0;
 		Health = MaxHealth;
 	}
@@ -91,7 +91,7 @@ public class igrac : MonoBehaviour {
 		Health -= damage;
 
 		if (Health <= 0)
-						levelmanager.Instance.KillPlayer ();
+						LevelManager.Instance.KillPlayer ();
 		}
 
     public void giveHealth(int health, GameObject instagator)
@@ -135,7 +135,7 @@ public class igrac : MonoBehaviour {
 				}
 		var direction = _isFacingRight ? Vector2.right : -Vector2.right;
 
-		var projectile = (projektil)Instantiate (Projectile, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
+		var projectile = (Projectile)Instantiate (Projectile, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
 		projectile.Initialize (gameObject, direction, _controller.Velocity);
 
 

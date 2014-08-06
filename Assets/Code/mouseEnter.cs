@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class mouseEnter : MonoBehaviour
+public class MouseEnter : MonoBehaviour
 {
 
     // Use this for initialization

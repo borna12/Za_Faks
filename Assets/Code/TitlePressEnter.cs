@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class pressEnter : MonoBehaviour
+public class titlePressEnter : MonoBehaviour
 {
     bool fadeIn = false;
     bool fadeOut = false;

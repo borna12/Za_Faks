@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class kontrolerstanja2d{
+public class ControllerState2D{
 
 	public bool IsCollidingRight{ get; set;}
 	public bool IsCollidingLeft{ get; set;}

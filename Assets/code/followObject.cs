@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class followObject : MonoBehaviour {
+public class FollowObject : MonoBehaviour {
 
 	public Vector2 offset;
 	public Transform following;

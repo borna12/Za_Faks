@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class checkpoint : MonoBehaviour {
+public class Checkpoint : MonoBehaviour {
 
 	private List<IPlayerRespawnListener> _listners;
 	public void Awake(){
@@ -10,20 +10,20 @@ public class checkpoint : MonoBehaviour {
 	}
 
 	public void PlayerHitCheckpoint()
-	{StartCoroutine(PlayerHitCheckpointCo(levelmanager.Instance.CurrentTimeBonus));
+	{StartCoroutine(PlayerHitCheckpointCo(LevelManager.Instance.CurrentTimeBonus));
 		}
 
 	private IEnumerator PlayerHitCheckpointCo(int bonus)
 	{
-		FloatingText.Show ("Checkpoint!","CheckpointText", new centeredTextPositioner(.3f));
+		FloatingText.Show ("Checkpoint!","CheckpointText", new CenteredTextPositioner(.3f));
         yield return new WaitForSeconds (.5f);
-		FloatingText.Show (string.Format ("+{0} time bonus!",bonus), "CheckpointText", new centeredTextPositioner (.3f));
+		FloatingText.Show (string.Format ("+{0} time bonus!",bonus), "CheckpointText", new CenteredTextPositioner (.3f));
 	}
 
 	public void PlayerLeftCheckpoint()
 	{}
 
-	public void SpawnPlayer (igrac player)
+	public void SpawnPlayer (Player player)
 	{
 		player.RespawnAt (transform);
 

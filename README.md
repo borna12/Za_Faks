@@ -46,12 +46,37 @@ Koristiti u slučaju nužde
 >> git clean -fd (ciscenje svega sto nije dio commita)
 ```
 
-##### .gitignore ignorira foldere Sound i Textures,sadržaj navedenih foldera je lokalno distribuiran
+##### .gitignore ignorira foldere Sound i Textures, sadržaj navedenih foldera je lokalno distribuiran
 
-* Assets/Sound
-* Assets/Textures
+* /Assets/Sound/
+* /Assets/Textures/
+* /Assets/Sound.meta
+* /Assets/Textures.meta
 
+GitHub struktrura projekta
+--------------
+Icarus-/
 
+* /Assets/Animations/
+* /Assets/Code/
+* /Assets/Prefabs/
+* /Assets/Resources/
+* /Assets/Scenes/
+* /Assets/Typefaces/
+* /Assets/Animations.meta
+* /Assets/Code.meta
+* /Assets/Prefabs.meta
+* /Assets/Resources.meta
+* /Assets/Scenes.meta
+* /Assets/Typefaces.meta
+
+* /ProjectSettings/ ...
+ 
+* /.gitattributes
+
+* /.gitignore
+
+* /README.md 
 
 
 [Dominik Pavičić]:https://www.facebook.com/dominik.pavicic.1

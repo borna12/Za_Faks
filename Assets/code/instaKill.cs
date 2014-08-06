@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
-public class instaKill : MonoBehaviour
+public class InstaKill : MonoBehaviour
 {
     public AudioClip Kill;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        var player = other.GetComponent<igrac>();
+        var player = other.GetComponent<Player>();
         if (player == null)
             return;
 
@@ -14,7 +14,7 @@ public class instaKill : MonoBehaviour
 
         if (Kill != null)
             AudioSource.PlayClipAtPoint(Kill, transform.position);
-        levelmanager.Instance.KillPlayer();
+        LevelManager.Instance.KillPlayer();
     }
 }
 

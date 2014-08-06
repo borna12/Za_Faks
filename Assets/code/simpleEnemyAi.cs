@@ -1,23 +1,23 @@
 ﻿using System.Configuration;
 using UnityEngine;
 
-public class simpleEnemyAi : MonoBehaviour, ITakeDamage,IPlayerRespawnListener 
+public class SimpleEnemyAi : MonoBehaviour, ITakeDamage,IPlayerRespawnListener 
 {
     public float Speed;
     public float FireRate = 1;
-    public projektil Projectile;
+    public Projectile Projectile;
     public GameObject DestroyedEffect;
     public int PointsToGivePlayer;
     public AudioClip ShootSound;
 
-    private kontrolerzalika _controller;
+    private CharacterController2D _controller;
     private Vector2 _direction;
     private Vector2 _startPosition;
     private float _canFireIn;
 
     public void Start()
     {
-        _controller = GetComponent<kontrolerzalika>();
+        _controller = GetComponent<CharacterController2D>();
         _direction = new Vector2(-1, 0);
         _startPosition = transform.position;
 
@@ -37,11 +37,11 @@ public class simpleEnemyAi : MonoBehaviour, ITakeDamage,IPlayerRespawnListener
         if ((_canFireIn -= Time.deltaTime) > 0)
             return;
 
-        var raycast = Physics2D.Raycast(transform.position, _direction, 10, 1 << LayerMask.NameToLayer("igrac"));
+        var raycast = Physics2D.Raycast(transform.position, _direction, 10, 1 << LayerMask.NameToLayer("Player"));
         if (!raycast)
             return;
 
-        var projectile = (projektil)Instantiate(Projectile, transform.position, transform.rotation);
+        var projectile = (Projectile)Instantiate(Projectile, transform.position, transform.rotation);
         projectile.Initialize(gameObject, _direction, _controller.Velocity);
         _canFireIn = FireRate;
 
@@ -54,10 +54,10 @@ public class simpleEnemyAi : MonoBehaviour, ITakeDamage,IPlayerRespawnListener
     {
         if (PointsToGivePlayer != 0)
         {
-            var projectile = instigator.GetComponent<projektil>();
-            if (projectile != null && projectile.Owner.GetComponent<igrac>() != null)
+            var projectile = instigator.GetComponent<Projectile>();
+            if (projectile != null && projectile.Owner.GetComponent<Player>() != null)
             {
-                gamemanager.Instance.AddPoints(PointsToGivePlayer);
+                GameManager.Instance.AddPoints(PointsToGivePlayer);
                 FloatingText.Show(string.Format("+{0}!", PointsToGivePlayer), "PointStarText",
                     new FromWorldPointTextPositioner(Camera.main, transform.position, 1.5f, 50));
             }
@@ -67,7 +67,7 @@ public class simpleEnemyAi : MonoBehaviour, ITakeDamage,IPlayerRespawnListener
         gameObject.SetActive(false);
     }
 
-    public void OnPlayerRespawnInThicCheckpoint(checkpoint checkpoint, igrac player)
+    public void OnPlayerRespawnInThicCheckpoint(Checkpoint Checkpoint, Player player)
     {
         _direction = new Vector2(-1, 0);
         transform.localScale = new Vector3(1, 1, 1);

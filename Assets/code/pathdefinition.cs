@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 
-public class pathdefinition : MonoBehaviour {
+public class PathDefinition : MonoBehaviour {
 
 	public Transform[] Points;
 

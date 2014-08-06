@@ -41,10 +41,10 @@ public class PathedProjectile : MonoBehaviour, ITakeDamage {
 
 		Destroy(gameObject);
 
-			var projectile = instigator.GetComponent<projektil>();
-			if (projectile != null && projectile.Owner.GetComponent<igrac>() != null && PointsToGivePlayer !=0)
+			var projectile = instigator.GetComponent<Projectile>();
+			if (projectile != null && projectile.Owner.GetComponent<Player>() != null && PointsToGivePlayer !=0)
 			{
-				gamemanager.Instance.AddPoints(PointsToGivePlayer);
+				GameManager.Instance.AddPoints(PointsToGivePlayer);
 				FloatingText.Show(string.Format("{0}!",PointsToGivePlayer),"PointStarText", new FromWorldPointTextPositioner(Camera.main, transform.position, 1.5f,50));
 			}
 

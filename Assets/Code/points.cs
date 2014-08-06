@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class points : MonoBehaviour {
+public class Points : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,7 +11,7 @@ public class points : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         TextMesh point = (TextMesh)GetComponent(typeof(TextMesh));
-        point.text = string.Format("Points:{0}", gamemanager.Instance.Points);
+        point.text = string.Format("Points:{0}", GameManager.Instance.Points);
 	
 	}
 }

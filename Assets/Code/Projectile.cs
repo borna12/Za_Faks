@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class projektil : MonoBehaviour {
+public abstract class Projectile : MonoBehaviour {
 
 	public float Speed;
 	public LayerMask CollisionMask;

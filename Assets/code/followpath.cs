@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class followpath : MonoBehaviour {
+public class FollowPath : MonoBehaviour {
 
 public enum FollowType{
 		MoveTowards,
 		Lerp
 	}
 	public FollowType Type=FollowType.MoveTowards;
-	public pathdefinition Path;
+	public PathDefinition Path;
 	public float Speed=1;
 	public float MaxDistanceToGoal = .1f;
 

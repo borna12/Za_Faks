@@ -1,4 +1,4 @@
 ﻿public interface IPlayerRespawnListener
 {
-    void OnPlayerRespawnInThicCheckpoint(checkpoint check, igrac player);
+    void OnPlayerRespawnInThicCheckpoint(Checkpoint check, Player player);
 }

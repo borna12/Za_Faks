@@ -8,10 +8,10 @@ public class FinishLevel : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
 {
-    if (other.GetComponent<igrac>() == null)
+    if (other.GetComponent<Player>() == null)
         return;
         
-   levelmanager.Instance.GoToNextLevel(LevelName);
+   LevelManager.Instance.GoToNextLevel(LevelName);
    var music = GameObject.Find("main_music");
    DontDestroyOnLoad(music);
 }
